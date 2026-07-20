@@ -1,6 +1,8 @@
 # Sofi Olona — Portfolio Site
 
-Static multi-page site for theatre director Sofi Olona. Vanilla HTML/CSS/JS, hosted on GitHub Pages, content sourced client-side from a public Google Sheet via the Sheets API.
+Static multi-page site for theatre director Sofi Olona. Vanilla HTML/CSS/JS, hosted on GitHub Pages.
+
+Text content is currently hardcoded directly into each HTML page. The `js/config.js` + `js/sheets-api.js` layer is scaffolded and ready to wire up a public Google Sheet as a content source later, if self-editing without touching HTML is wanted (see "Google Sheet setup" below) — it isn't wired to any page yet.
 
 ## Structure
 
@@ -13,27 +15,34 @@ writing.html           Writing
 resume.html            Resumé
 press.html              Press
 shows/
-  show-one.html         Show sub-page (black background)
-  show-two.html         Show sub-page (black background)
+  mutually-assured-self-destruction.html   Show sub-page (black background)
+  chicago-pope.html                         Show sub-page (black background)
 
 partials/               Shared header/footer, injected at runtime by js/include.js
 css/
   variables.css          Design tokens (color, type, spacing)
   base.css               Reset + base typography
   layout.css              Structural layout
-  components.css          Reusable UI pieces (nav, buttons, cards)
+  components.css          Reusable UI pieces (nav, buttons, cards, entries, placeholders)
   show-page.css           Black-background theme for show sub-pages
 js/
-  config.js               Sheet ID / API key / tab ranges
+  config.js               Sheet ID / API key / tab ranges (unused until wired to a page)
   sheets-api.js            fetchSheetRange() — wraps the Sheets API v4 values.get endpoint
   include.js               Fetches and injects partials/header.html and partials/footer.html
   nav.js                   Mobile nav toggle, active-link highlighting
   main.js                  Bootstraps every page (loads partials, inits nav, fires "app:ready")
-  pages/                   One file per page; each fetches its own sheet range on "app:ready"
+  pages/                   One file per page; stubs currently call fetchSheetRange() but nothing renders it
 assets/
-  images/                  shows/show-one, shows/show-two, headshots, press
+  images/                  shows/mutually-assured-self-destruction, shows/chicago-pope, headshots, press
   fonts/                   (unused — fonts load from Google Fonts CDN)
 ```
+
+## Known placeholders
+
+- All photos (headshot, personal photo strip, show carousels, press header images) are dashed-border placeholder boxes — swap in `<img>` tags once assets are ready.
+- Script/resumé PDF links point to `#` — need real Drive/hosted links.
+- Footer email is a placeholder address — replace in `partials/footer.html`.
+- "Charlie's" writing sample description ("a span of 30...") looks like it got cut off mid-sentence — confirm the full line.
 
 ## Wiring a page together
 

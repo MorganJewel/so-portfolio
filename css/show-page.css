@@ -31,6 +31,18 @@ body[data-page="show"] .site-nav a.is-active {
   border-color: var(--color-accent-light);
 }
 
+body[data-page="show"] .entry__meta,
+body[data-page="show"] .page-subhead,
+body[data-page="show"] .quote cite {
+  color: var(--color-accent-light);
+}
+
+body[data-page="show"] .placeholder-box {
+  border-color: var(--color-accent-light);
+  color: var(--color-accent-light);
+  background: rgba(139, 68, 199, 0.12);
+}
+
 .show-hero {
   margin-bottom: var(--space-lg);
 }
