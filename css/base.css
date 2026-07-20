@@ -9,10 +9,11 @@ html {
 }
 
 body {
+  --page-bg: var(--color-cream);
   margin: 0;
   font-family: var(--font-body);
   font-size: 16px;
-  background: var(--color-cream);
+  background: var(--page-bg);
   color: var(--color-ink);
   line-height: 1.6;
 }

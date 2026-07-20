@@ -1,6 +1,6 @@
 .site-header {
-  background: var(--color-cream);
-  border-bottom: 1px solid var(--color-cream-dim);
+  background: var(--color-cream-dim);
+  border-bottom: 3px solid var(--color-accent);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -10,15 +10,19 @@
   max-width: var(--content-width);
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-sm) var(--space-md) 0;
+}
+
+.site-logo {
+  padding-bottom: var(--space-sm);
 }
 
 .site-nav {
   display: flex;
-  align-items: center;
-  gap: var(--space-md);
+  align-items: flex-end;
+  gap: 0;
 }
 
 .nav-toggle {
@@ -63,6 +67,7 @@ main.page {
     background: none;
     border: none;
     padding: var(--space-2xs);
+    margin-bottom: var(--space-sm);
   }
 
   .site-nav {
@@ -72,10 +77,10 @@ main.page {
     left: 0;
     right: 0;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 0;
-    background: var(--color-cream);
-    border-bottom: 1px solid var(--color-cream-dim);
+    background: var(--color-cream-dim);
+    border-bottom: 3px solid var(--color-accent);
     padding: var(--space-sm) var(--space-md);
   }
 

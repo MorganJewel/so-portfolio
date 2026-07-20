@@ -1,34 +1,51 @@
 body[data-page="show"] {
-  background: var(--color-black);
+  --page-bg: var(--color-black);
+  background: var(--page-bg);
   color: var(--color-cream);
 }
 
-body[data-page="show"] .site-header,
+body[data-page="show"] .site-header {
+  background: var(--color-black-soft);
+  border-bottom-color: var(--color-accent-light);
+}
+
 body[data-page="show"] .site-footer {
-  background: var(--color-black);
+  background: var(--color-black-soft);
   border-color: rgba(247, 241, 228, 0.12);
 }
 
-body[data-page="show"] .site-nav {
-  background: var(--color-black);
-}
-
 body[data-page="show"] .site-logo,
-body[data-page="show"] .site-nav a,
 body[data-page="show"] .site-footer__nav a,
 body[data-page="show"] .nav-toggle span {
   color: var(--color-cream);
-  background-color: transparent;
 }
 
 body[data-page="show"] .nav-toggle span {
   background: var(--color-cream);
 }
 
-body[data-page="show"] .site-nav a:hover,
-body[data-page="show"] .site-nav a.is-active {
-  color: var(--color-accent-light);
+body[data-page="show"] .site-nav a {
+  background: var(--color-black-soft);
+  color: var(--color-cream);
   border-color: var(--color-accent-light);
+}
+
+body[data-page="show"] .site-nav a:hover {
+  background: var(--color-accent-light);
+  color: var(--color-black);
+}
+
+body[data-page="show"] .site-nav a.is-active {
+  background: var(--page-bg);
+  color: var(--color-accent-light);
+  border-bottom-color: var(--page-bg);
+}
+
+@media (max-width: 720px) {
+  body[data-page="show"] .site-nav {
+    background: var(--color-black-soft);
+    border-bottom-color: var(--color-accent-light);
+  }
 }
 
 body[data-page="show"] .entry__meta,
