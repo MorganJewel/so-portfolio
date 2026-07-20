@@ -1,0 +1,28 @@
+:root {
+  --color-accent: #6B21A8;
+  --color-accent-dark: #4C1580;
+  --color-accent-light: #8B44C7;
+  --color-cream: #F7F1E4;
+  --color-cream-dim: #EDE4D0;
+  --color-ink: #1A1512;
+  --color-black: #0A0A0A;
+  --color-black-soft: #141414;
+
+  --font-header: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --content-width: 1120px;
+
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --transition-base: 200ms ease;
+}
