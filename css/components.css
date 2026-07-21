@@ -160,6 +160,7 @@
 }
 
 .placeholder-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -185,6 +186,31 @@
   background-color: var(--color-kraft-light);
   background-image: repeating-linear-gradient(45deg, rgba(46, 21, 36, 0.05) 0px, transparent 1px, transparent 4px);
   border: 1px solid rgba(46, 21, 36, 0.15);
+}
+
+.placeholder-box::after {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  width: 62px;
+  height: 24px;
+  transform: translateX(-50%) rotate(-4deg);
+  background: linear-gradient(180deg, var(--color-tape), rgba(139, 68, 199, 0.22));
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.placeholder-box:nth-of-type(3n)::after {
+  left: 42%;
+  transform: translateX(-50%) rotate(3deg);
+}
+
+.placeholder-box:nth-of-type(3n+1)::after {
+  left: 58%;
+  transform: translateX(-50%) rotate(-5deg);
 }
 
 .photo-strip {
