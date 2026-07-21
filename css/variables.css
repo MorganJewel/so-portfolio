@@ -8,11 +8,14 @@
   --color-black: #0A0A0A;
   --color-black-soft: #141414;
 
-  --color-kraft: #CBAB7C;
+  --color-kraft: #C3A06C;
   --color-kraft-light: #E4D2AE;
-  --color-kraft-dark: #A8825A;
+  --color-kraft-dark: #8A6640;
+  --color-kraft-spine: #6E4E30;
+  --color-paper: #F1E9D8;
   --color-blackberry: #4A1E3C;
   --color-plum-ink: #2E1524;
+  --color-tape: rgba(139, 68, 199, 0.4);
 
   --font-header: 'Playfair Display', Georgia, serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;

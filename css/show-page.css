@@ -45,8 +45,17 @@ body[data-page="show"] .quote cite {
 body[data-page="show"] .placeholder-box {
   border-color: var(--color-accent-light);
   color: var(--color-accent-light);
-  background-color: rgba(203, 171, 124, 0.08);
-  background-image: none;
+  background-color: var(--color-black-soft);
+}
+
+body[data-page="show"] .placeholder-box::before {
+  background-color: rgba(203, 171, 124, 0.1);
+  border-color: rgba(203, 171, 124, 0.25);
+}
+
+body[data-page="show"] .paper-card {
+  background-color: var(--color-black-soft);
+  color: var(--color-cream);
 }
 
 .show-hero {
