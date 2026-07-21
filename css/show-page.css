@@ -24,21 +24,9 @@ body[data-page="show"] .nav-toggle span {
   background: var(--color-cream);
 }
 
-body[data-page="show"] .site-nav a {
-  background: var(--color-black-soft);
-  color: var(--color-cream);
-  border-color: var(--color-accent-light);
-}
-
 body[data-page="show"] .site-nav a:hover {
-  background: var(--color-accent-light);
+  background-color: var(--color-accent-light);
   color: var(--color-black);
-}
-
-body[data-page="show"] .site-nav a.is-active {
-  background: var(--page-bg);
-  color: var(--color-accent-light);
-  border-bottom-color: var(--page-bg);
 }
 
 @media (max-width: 720px) {
@@ -57,7 +45,8 @@ body[data-page="show"] .quote cite {
 body[data-page="show"] .placeholder-box {
   border-color: var(--color-accent-light);
   color: var(--color-accent-light);
-  background: rgba(139, 68, 199, 0.12);
+  background-color: rgba(203, 171, 124, 0.08);
+  background-image: none;
 }
 
 .show-hero {

@@ -8,8 +8,15 @@
   --color-black: #0A0A0A;
   --color-black-soft: #141414;
 
+  --color-kraft: #CBAB7C;
+  --color-kraft-light: #E4D2AE;
+  --color-kraft-dark: #A8825A;
+  --color-blackberry: #4A1E3C;
+  --color-plum-ink: #2E1524;
+
   --font-header: 'Playfair Display', Georgia, serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-typewriter: 'Special Elite', 'Courier New', monospace;
 
   --content-width: 1120px;
 

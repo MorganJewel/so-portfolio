@@ -1,5 +1,6 @@
 .site-header {
-  background: var(--color-cream-dim);
+  background-color: var(--color-cream-dim);
+  background-image: repeating-linear-gradient(180deg, rgba(74, 30, 60, 0.025) 0px, transparent 1px, transparent 3px);
   border-bottom: 3px solid var(--color-accent);
   position: sticky;
   top: 0;
@@ -22,7 +23,7 @@
 .site-nav {
   display: flex;
   align-items: flex-end;
-  gap: 0;
+  gap: 5px;
 }
 
 .nav-toggle {
