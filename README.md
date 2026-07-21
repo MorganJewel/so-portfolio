@@ -2,7 +2,7 @@
 
 Static multi-page site for theatre director Sofi Olona. Vanilla HTML/CSS/JS, hosted on GitHub Pages.
 
-Text content is currently hardcoded directly into each HTML page. The `js/config.js` + `js/sheets-api.js` layer is scaffolded and ready to wire up a public Google Sheet as a content source later, if self-editing without touching HTML is wanted (see "Google Sheet setup" below) — it isn't wired to any page yet.
+Text content is currently hardcoded directly into each HTML page. The `js/config.js` + `js/sheets-api.js` layer is scaffolded to pull from a public Google Sheet, and one field is wired up already: the footer email, sourced from a "Sofi Olona Site Settings" sheet (see "Google Sheet setup" below). Everything else is still hardcoded HTML.
 
 ## Structure
 
@@ -41,8 +41,7 @@ assets/
 
 - All photos (headshot, personal photo strip, show carousels, press header images) are dashed-border placeholder boxes — swap in `<img>` tags once assets are ready.
 - Script/resumé PDF links point to `#` — need real Drive/hosted links.
-- Footer email is a placeholder address — replace in `partials/footer.html`.
-- "Charlie's" writing sample description ("a span of 30...") looks like it got cut off mid-sentence — confirm the full line.
+- Footer email shows a placeholder until the Sheet's `footer_email` row is filled in and an API key is set (see below).
 
 ## Wiring a page together
 
@@ -52,17 +51,15 @@ Every page loads `css/variables.css` → `base.css` → `layout.css` → `compon
 
 ## Google Sheet setup
 
-Fill in `js/config.js`:
+`js/config.js` already points at a spreadsheet called **"Sofi Olona Site Settings"** (in Morgan's Drive — share it with Sofi as an editor so she can update it herself: `key` / `value` / `notes` columns, one row per setting, currently just `footer_email`).
 
-```js
-export const SHEETS_CONFIG = {
-  spreadsheetId: 'YOUR_SPREADSHEET_ID',
-  apiKey: 'YOUR_API_KEY',
-  ranges: { ... }
-};
-```
+What's still needed before it actually shows up on the site:
 
-The sheet must be shared as "Anyone with the link — Viewer". The API key should be restricted (HTTP referrers) to this site's GitHub Pages domain in the Google Cloud Console, since it will be visible in client-side code.
+1. **Share the sheet** so it's viewable by anyone with the link (File → Share → General access → Anyone with the link — Viewer). It can stay editable only by specific people; it just needs to be publicly *readable* for the client-side fetch to work.
+2. **Get a Google API key**: Google Cloud Console → create a project (if needed) → enable the "Google Sheets API" → Credentials → Create API key. Restrict it by HTTP referrer to the site's domain, since the key will be visible in client-side code.
+3. Paste that key into `js/config.js` as `apiKey`.
+
+Once that's done, Sofi can edit the `value` column in the sheet and it'll appear on the live site (may take a minute to reflect, no redeploy needed). The same pattern (add a row to Settings, or a new tab + range in `SHEETS_CONFIG.ranges`) can be extended to other fields later.
 
 ## Local development
 

@@ -1,7 +1,8 @@
 export const SHEETS_CONFIG = {
-  spreadsheetId: '',
+  spreadsheetId: '19CpUiU5JRN-5oWMrEzTmKAeKMSYHbkh76e2gdQ3QtHw',
   apiKey: '',
   ranges: {
+    settings: 'Sheet1!A2:C',
     home: 'Home!A2:Z',
     about: 'About!A2:Z',
     directing: 'Directing!A2:Z',
