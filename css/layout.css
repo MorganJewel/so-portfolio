@@ -39,7 +39,7 @@ main.page {
 
 .site-footer {
   background: var(--color-cream-dim);
-  border-top: 1px solid var(--color-cream-dim);
+  border-top: 3px solid var(--color-accent);
 }
 
 .site-footer__inner {
