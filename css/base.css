@@ -14,7 +14,10 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   background-color: var(--page-bg);
-  background-image: var(--grain-coarse);
+  background-image: var(--grain-fine), url("../assets/images/textures/paper-cream-tile.jpg");
+  background-size: auto, 700px auto;
+  background-repeat: repeat, repeat;
+  background-blend-mode: normal, multiply;
   color: var(--color-ink);
   line-height: 1.6;
 }
