@@ -37,8 +37,7 @@ body[data-page="show"] .site-nav a:hover {
 }
 
 body[data-page="show"] .entry__meta,
-body[data-page="show"] .page-subhead,
-body[data-page="show"] .quote cite {
+body[data-page="show"] .page-subhead {
   color: var(--color-accent-light);
 }
 

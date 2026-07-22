@@ -459,7 +459,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-accent-light);
+  color: var(--color-accent-pale);
   margin-top: var(--space-2xs);
 }
 
@@ -518,12 +518,17 @@
   display: grid;
   grid-template-columns: minmax(220px, 320px) 1fr;
   gap: var(--space-xl);
-  align-items: start;
+  align-items: stretch;
   margin-bottom: var(--space-lg);
 }
 
 .about-intro__photo {
   min-height: 340px;
+}
+
+.about-intro__bio p {
+  line-height: 1.75;
+  margin-bottom: var(--space-md);
 }
 
 .about-intro__bio p:last-child {
