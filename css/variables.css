@@ -15,11 +15,16 @@
   --color-paper: #F1E9D8;
   --color-blackberry: #4A1E3C;
   --color-plum-ink: #2E1524;
-  --color-tape: rgba(139, 68, 199, 0.4);
+  --color-tape: rgba(139, 68, 199, 0.55);
+  --color-tape-2: rgba(163, 116, 55, 0.7);
+  --color-tape-3: rgba(107, 33, 168, 0.5);
 
-  --font-header: 'Playfair Display', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-header: 'Fraunces', Georgia, serif;
+  --font-body: 'Courier Prime', 'Courier New', monospace;
   --font-typewriter: 'Special Elite', 'Courier New', monospace;
+
+  --grain-fine: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --grain-coarse: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 
   --content-width: 1120px;
 
