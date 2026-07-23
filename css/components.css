@@ -13,7 +13,7 @@
 .site-nav a {
   position: relative;
   font-family: var(--font-typewriter);
-  font-size: 0.7rem;
+  font-size: 0.82rem;
   letter-spacing: 0.03em;
   padding: 14px 22px 11px;
   margin-right: -9px;
@@ -84,7 +84,7 @@
 
 .site-footer__nav a {
   font-family: var(--font-typewriter);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-ink);
@@ -96,9 +96,9 @@
 
 .site-footer__meta {
   font-family: var(--font-typewriter);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--color-ink);
-  opacity: 0.6;
+  opacity: 0.75;
   margin: 0;
 }
 
@@ -115,7 +115,7 @@
   border: 1px solid var(--color-accent);
   border-radius: var(--radius-sm);
   color: var(--color-accent);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: background var(--transition-base), color var(--transition-base);
@@ -138,6 +138,7 @@
 .work-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
   gap: var(--space-md);
 }
 
@@ -145,10 +146,8 @@
   display: block;
   background-color: var(--color-paper);
   background-image: var(--grain-fine);
-  border: 1px solid var(--color-kraft-dark);
-  padding: 10px 10px 16px;
+  padding: 0 0 14px;
   overflow: visible;
-  box-shadow: 0 6px 14px rgba(46, 21, 36, 0.2);
 }
 
 .work-grid .work-card:nth-of-type(odd) {
@@ -169,7 +168,7 @@
 
 .site-footer__email {
   font-family: var(--font-typewriter);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   letter-spacing: 0.03em;
   color: var(--color-accent);
 }
@@ -186,9 +185,9 @@
 
 .page-subhead {
   font-family: var(--font-typewriter);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-accent);
   margin: var(--space-lg) 0 var(--space-md);
@@ -205,13 +204,13 @@
   text-align: center;
   font-family: var(--font-typewriter);
   color: var(--color-blackberry);
-  background-color: var(--color-cream);
+  background-color: var(--color-kraft-light);
   filter: drop-shadow(0 6px 10px rgba(46, 21, 36, 0.3));
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 16px 16px 20px;
+  letter-spacing: 0.02em;
+  padding: 0 10px 28px;
   min-height: 220px;
 }
 
@@ -219,12 +218,19 @@
   content: '';
   display: block;
   flex: 1 1 auto;
-  margin-bottom: 10px;
+  margin: 0 -10px 8px;
   background-color: var(--color-kraft-light);
   background-image: url("../assets/images/textures/paper-kraft.jpg");
   background-size: cover;
+  background-position: center;
   background-blend-mode: multiply;
-  border: 1px solid rgba(46, 21, 36, 0.15);
+}
+
+/* real photo — set style="--photo-img: url('...')" on the .placeholder-box--photo element */
+.placeholder-box--photo::before {
+  background-image: var(--photo-img);
+  background-color: var(--color-ink);
+  background-blend-mode: normal;
 }
 
 /* torn-edge variants — cycled per instance so no two photos share a silhouette */
@@ -283,6 +289,15 @@
   background-position: center, center;
   background-blend-mode: normal, normal;
   border: none;
+}
+
+.placeholder-box--photo:nth-of-type(5n+3)::before,
+.placeholder-box--photo.placeholder-box--booth::before {
+  background-image:
+    url("../assets/images/ephemera/filmstrip-frame.png"),
+    var(--photo-img);
+  background-size: contain, cover;
+  background-color: var(--color-ink);
 }
 
 .placeholder-box:nth-of-type(5n+3)::after,
@@ -373,8 +388,8 @@
 
 .entry__meta {
   font-family: var(--font-typewriter);
-  font-size: 0.75rem;
-  letter-spacing: 0.03em;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--color-accent);
   margin: 0 0 var(--space-2xs);
@@ -382,7 +397,7 @@
 
 .entry__credits {
   margin: var(--space-sm) 0 0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 
@@ -456,8 +471,8 @@
   display: block;
   font-family: var(--font-typewriter);
   font-style: normal;
-  font-size: 0.75rem;
-  letter-spacing: 0.03em;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--color-accent-pale);
   margin-top: var(--space-2xs);
@@ -591,9 +606,9 @@
   display: inline-block;
   position: relative;
   font-family: var(--font-typewriter);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   background-color: var(--color-kraft);
   background-image: var(--grain-fine);

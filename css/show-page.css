@@ -65,7 +65,21 @@ body[data-page="show"] .paper-card {
 }
 
 .show-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: var(--space-sm);
+  columns: 3 320px;
+  column-gap: var(--space-md);
+}
+
+.show-gallery {
+  margin-top: 70px;
+}
+
+.show-gallery .placeholder-box {
+  break-inside: avoid;
+  margin: 70px 0 var(--space-md);
+}
+
+@media (max-width: 640px) {
+  .show-gallery {
+    columns: 1;
+  }
 }
