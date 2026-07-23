@@ -427,19 +427,19 @@
   padding: var(--space-xl) 0;
 }
 
-.hero--cover {
-  display: grid;
-  grid-template-columns: minmax(260px, 380px) 1fr;
-  align-items: center;
-  gap: var(--space-xl);
+.hero--collage {
+  min-height: 900px;
 }
 
 .hero__photo {
-  min-height: 420px;
+  position: absolute;
+  width: 300px;
+  min-height: 400px;
 }
 
 .hero__card {
-  max-width: 420px;
+  position: absolute;
+  width: 420px;
 }
 
 .hero__name {
@@ -454,16 +454,80 @@
   margin: 0;
 }
 
-@media (max-width: 720px) {
-  .hero--cover {
-    grid-template-columns: 1fr;
+/* loose background scraps — real photographed paper/ephemera tucked behind the focal cards */
+.collage-scrap {
+  position: absolute;
+  z-index: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+/* a classic photo-booth strip — four stacked frames, not a movie filmstrip */
+.photobooth-strip {
+  position: absolute;
+  width: 190px;
+  background-color: var(--color-cream);
+  padding: 10px 10px 16px;
+  filter: drop-shadow(0 10px 16px rgba(20, 10, 15, 0.4));
+  clip-path: polygon(0% 1%, 100% 0%, 99% 50%, 100% 99%, 1% 100%, 0% 52%);
+}
+
+.photobooth-strip__frame {
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-kraft-light);
+  background-image: url("../assets/images/textures/paper-kraft.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  margin-bottom: 7px;
+}
+
+.photobooth-strip__frame:last-child {
+  margin-bottom: 0;
+}
+
+.photobooth-strip__frame--photo {
+  background-image: var(--photo-img);
+  background-blend-mode: normal;
+}
+
+.photobooth-strip::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 84px;
+  height: 36px;
+  transform: translateX(-50%) rotate(-3deg);
+  background-image: url("../assets/images/textures/washi-tape-3.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 3px 3px rgba(20, 10, 15, 0.3));
+}
+
+@media (max-width: 900px) {
+  .hero--collage {
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: var(--space-lg);
+    padding-bottom: var(--space-lg);
   }
 
-  .hero__card {
-    max-width: none;
+  .hero--collage .hero__photo,
+  .hero--collage .hero__card,
+  .hero--collage .photobooth-strip,
+  .hero--collage .ephemera-flower {
+    position: static;
+    transform: none !important;
     margin: 0 auto;
+  }
+
+  .hero--collage .collage-scrap {
+    display: none;
   }
 }
 

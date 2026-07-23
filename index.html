@@ -19,10 +19,23 @@
 <div id="site-header" data-include="partials/header.html"></div>
 
 <main id="main-content" class="page page--home">
-  <section class="hero hero--cover">
-    <div class="ephemera-flower ephemera-flower--2" style="top: -60px; right: 30px; transform: rotate(14deg);"></div>
-    <div class="hero__photo placeholder-box">Cover photo</div>
-    <div class="hero__card paper-card paper-card--purple paper-card--taped paper-card--tilt-left">
+  <section class="hero hero--collage">
+    <div class="hero__photo placeholder-box" style="left: 60px; top: 100px; transform: rotate(-2deg); z-index: 2;">Cover photo</div>
+
+    <div class="collage-scrap" style="left: -20px; top: 20px; width: 440px; height: 289px; background-image: url('assets/images/ephemera/scrap-vintage-1.png'); transform: rotate(-3deg); opacity: 0.95; z-index: 1;"></div>
+    <div class="collage-scrap" style="right: -30px; top: 470px; width: 380px; height: 350px; background-image: url('assets/images/ephemera/scrap-paperclip-notes.png'); transform: rotate(3deg); opacity: 0.95; z-index: 1;"></div>
+
+    <div class="photobooth-strip" style="left: 400px; top: 40px; transform: rotate(4deg); z-index: 3;">
+      <div class="photobooth-strip__frame"></div>
+      <div class="photobooth-strip__frame"></div>
+      <div class="photobooth-strip__frame"></div>
+      <div class="photobooth-strip__frame"></div>
+    </div>
+
+    <div class="ephemera-flower ephemera-flower--2" style="left: 330px; top: 470px; transform: rotate(-14deg); z-index: 5;"></div>
+    <div class="ephemera-flower" style="right: 30px; top: 30px; transform: rotate(12deg); z-index: 5;"></div>
+
+    <div class="hero__card paper-card paper-card--purple paper-card--taped paper-card--tilt-left" style="left: 610px; top: 330px; z-index: 4;">
       <h1 class="page-title hero__name">Sofi Olona</h1>
       <p class="hero__tagline">Theatrical Director, Devisor, &amp; Writer, Mexican Badass, Pretty Girl.</p>
     </div>
