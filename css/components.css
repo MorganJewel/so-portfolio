@@ -471,7 +471,7 @@
   background-color: var(--color-cream);
   padding: 10px 10px 16px;
   filter: drop-shadow(0 10px 16px rgba(20, 10, 15, 0.4));
-  clip-path: polygon(0% 1%, 100% 0%, 99% 50%, 100% 99%, 1% 100%, 0% 52%);
+  clip-path: polygon(0% -30px, 100% -28px, 99% 50%, 100% 99%, 1% 100%, 0% 52%);
 }
 
 .photobooth-strip__frame {
@@ -495,15 +495,16 @@
 .photobooth-strip::after {
   content: '';
   position: absolute;
-  top: -20px;
+  top: -24px;
   left: 50%;
-  width: 84px;
-  height: 36px;
+  width: 112px;
+  height: 48px;
   transform: translateX(-50%) rotate(-3deg);
   background-image: url("../assets/images/textures/washi-tape-3.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   filter: drop-shadow(0 3px 3px rgba(20, 10, 15, 0.3));
+  z-index: 2;
 }
 
 @media (max-width: 900px) {

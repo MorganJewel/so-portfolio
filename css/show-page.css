@@ -4,6 +4,23 @@ body[data-page="show"] {
   color: var(--color-cream);
 }
 
+body[data-page="show"] #main-content {
+  max-width: 1240px;
+  margin: var(--space-xl) auto;
+  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  background-color: var(--color-kraft-spine);
+  background-image: var(--grain-fine);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
+  border-radius: 3px;
+}
+
+@media (max-width: 720px) {
+  body[data-page="show"] #main-content {
+    margin: var(--space-md) auto;
+    padding: var(--space-lg) var(--space-md) var(--space-md);
+  }
+}
+
 body[data-page="show"] .site-header {
   background: var(--color-black-soft);
   border-bottom-color: var(--color-accent-light);
@@ -65,17 +82,33 @@ body[data-page="show"] .paper-card {
 }
 
 .show-gallery {
+  position: relative;
   columns: 3 320px;
-  column-gap: var(--space-md);
-}
-
-.show-gallery {
+  column-gap: var(--space-sm);
   margin-top: 70px;
 }
 
+.show-gallery::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -50px;
+  width: 380px;
+  height: 351px;
+  background-image: url("../assets/images/ephemera/scrap-vintage-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(6deg);
+  opacity: 0.9;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .show-gallery .placeholder-box {
+  position: relative;
+  z-index: 1;
   break-inside: avoid;
-  margin: 70px 0 var(--space-md);
+  margin: 70px 0 var(--space-sm);
 }
 
 @media (max-width: 640px) {
