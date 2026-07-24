@@ -4,23 +4,6 @@ body[data-page="show"] {
   color: var(--color-cream);
 }
 
-body[data-page="show"] #main-content {
-  max-width: 1240px;
-  margin: var(--space-xl) auto;
-  padding: var(--space-xl) var(--space-lg) var(--space-lg);
-  background-color: var(--color-kraft-spine);
-  background-image: var(--grain-fine);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
-  border-radius: 3px;
-}
-
-@media (max-width: 720px) {
-  body[data-page="show"] #main-content {
-    margin: var(--space-md) auto;
-    padding: var(--space-lg) var(--space-md) var(--space-md);
-  }
-}
-
 body[data-page="show"] .site-header {
   background: var(--color-black-soft);
   border-bottom-color: var(--color-accent-light);
@@ -84,11 +67,52 @@ body[data-page="show"] .paper-card {
 .show-gallery {
   position: relative;
   columns: 3 320px;
-  column-gap: var(--space-sm);
+  column-gap: var(--space-md);
   margin-top: 70px;
 }
 
-.show-gallery::before {
+.show-gallery .placeholder-box {
+  position: relative;
+  z-index: 1;
+  break-inside: avoid;
+  margin: 70px 0 var(--space-md);
+}
+
+@media (max-width: 640px) {
+  .show-gallery {
+    columns: 1;
+  }
+}
+
+/* ---- Mutually Assured Self-Destruction only — folder-panel treatment, not yet applied elsewhere ---- */
+
+body[data-show-id="mutually-assured-self-destruction"] #main-content {
+  max-width: 1240px;
+  margin: var(--space-xl) auto;
+  padding: 150px var(--space-lg) 70px;
+  background-color: var(--color-kraft-light);
+  background-image: var(--grain-fine);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
+  border-style: solid;
+  border-width: 135px 25px 60px 25px;
+  border-image-source: url("../assets/images/ephemera/folder-full.png");
+  border-image-slice: 135 25 60 25;
+  border-image-repeat: stretch round;
+}
+
+@media (max-width: 720px) {
+  body[data-show-id="mutually-assured-self-destruction"] #main-content {
+    margin: var(--space-md) auto;
+    padding: 130px var(--space-md) 60px;
+    border-width: 110px 18px 40px 18px;
+  }
+}
+
+body[data-show-id="mutually-assured-self-destruction"] .show-gallery {
+  column-gap: var(--space-sm);
+}
+
+body[data-show-id="mutually-assured-self-destruction"] .show-gallery::before {
   content: '';
   position: absolute;
   top: -60px;
@@ -104,15 +128,25 @@ body[data-page="show"] .paper-card {
   pointer-events: none;
 }
 
-.show-gallery .placeholder-box {
-  position: relative;
-  z-index: 1;
-  break-inside: avoid;
+body[data-show-id="mutually-assured-self-destruction"] .show-gallery .placeholder-box {
   margin: 70px 0 var(--space-sm);
 }
 
-@media (max-width: 640px) {
-  .show-gallery {
-    columns: 1;
-  }
+/* the folder panel is a light paper tone, so this one show needs light-theme text, not the dark-theme defaults */
+body[data-show-id="mutually-assured-self-destruction"] #main-content {
+  color: var(--color-ink);
+}
+
+body[data-show-id="mutually-assured-self-destruction"] .show-hero__title,
+body[data-show-id="mutually-assured-self-destruction"] .entry__title {
+  color: var(--color-blackberry);
+}
+
+body[data-show-id="mutually-assured-self-destruction"] .entry__meta,
+body[data-show-id="mutually-assured-self-destruction"] .page-subhead {
+  color: var(--color-accent);
+}
+
+body[data-show-id="mutually-assured-self-destruction"] .entry__credits {
+  color: var(--color-ink);
 }
